@@ -1,0 +1,44 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/cms/coreOrder/"}){ -->
+
+<form class="layui-form layui-form-pane" id="addForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+		
+            <div class="layui-inline">
+            <label class="layui-form-label">name</label>
+            <div class="layui-input-inline">
+                <input type="text" name="name" class="layui-input" >
+            </div>
+            </div>
+		
+		
+            <div class="layui-inline">
+            <label class="layui-form-label">age</label>
+            <div class="layui-input-inline">
+                <input type="text" name="age" class="layui-input" >
+            </div>
+            </div>
+		
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+		
+            <div class="layui-inline">
+            <label class="layui-form-label">address</label>
+            <div class="layui-input-inline">
+                <input type="text" name="address" class="layui-input" >
+            </div>
+            </div>
+		
+        </div>
+    </div>
+    <layui:submitButtons id="addButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['add'], function(){
+    var coreOrderAdd = layui.add
+    coreOrderAdd.init();
+});
+</script>

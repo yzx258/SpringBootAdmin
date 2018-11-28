@@ -1,0 +1,40 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/cms/coreOrder/"}){ -->
+
+<form class="layui-form layui-form-pane" id="updateForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">name</label>
+            <div class="layui-input-inline">
+                <input type="text" id="name" name="name"  value="${coreOrder.name}"   class="layui-input" >
+            </div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">age</label>
+            <div class="layui-input-inline">
+                <input type="text" id="age" name="age"  value="${coreOrder.age}"   class="layui-input" >
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">address</label>
+            <div class="layui-input-inline">
+                <input type="text" id="address" name="address"  value="${coreOrder.address}"   class="layui-input" >
+            </div>
+            </div>
+        </div>
+    </div>
+	
+    <input type="hidden" name="id" value=${coreOrder.id} />
+    <layui:submitButtons id="updateButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['edit'], function(){
+    var coreOrderEdit = layui.edit
+    coreOrderEdit.init();
+});
+</script>
